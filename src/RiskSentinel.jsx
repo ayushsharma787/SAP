@@ -344,6 +344,23 @@ function Gauge({ value, size = 180, stroke = 16, segments = null, caption, durat
 /* ============================================================
    Shell bar + notifications + tabs
    ============================================================ */
+function SapLogo({ height = 28 }) {
+  return (
+    <svg height={height} viewBox="0 0 100 50" style={{ display: "block" }} role="img" aria-label="SAP">
+      <defs>
+        <linearGradient id="sapGrad" x1="0" y1="0" x2="0.15" y2="1">
+          <stop offset="0%" stopColor="#1AA7E8" />
+          <stop offset="100%" stopColor="#0A66AE" />
+        </linearGradient>
+      </defs>
+      <polygon points="0,0 58,0 100,50 0,50" fill="url(#sapGrad)" />
+      <polygon points="58,0 100,0 100,50" fill="#63BFEA" />
+      <text x="6" y="37" textLength="52" lengthAdjust="spacingAndGlyphs"
+        fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="32" fill="#FFFFFF">SAP</text>
+    </svg>
+  );
+}
+
 function ShellBar({ onOpenAction }) {
   const [notifOpen, setNotif] = useState(false);
   const [jouleOpen, setJoule] = useState(false);
@@ -357,7 +374,7 @@ function ShellBar({ onOpenAction }) {
   return (
     <div style={{ height: 44, minHeight: 44, background: C.shell, color: "#fff", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 16px", position: "relative", zIndex: 20 }}>
       <div className="flex items-center" style={{ gap: 12 }}>
-        <span style={{ fontWeight: 700, fontSize: 18, letterSpacing: 0.5 }}>SAP</span>
+        <SapLogo height={28} />
         <span style={{ width: 1, height: 18, background: "rgba(255,255,255,0.3)" }} />
         <span style={{ fontSize: 16, fontWeight: 600 }}>Proactive Risk Sentinel</span>
         <span style={{ fontSize: 11, opacity: 0.65, marginLeft: 4 }}>GRC 2026 · Joule</span>
