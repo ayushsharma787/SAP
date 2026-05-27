@@ -353,8 +353,7 @@ function SapLogo({ height = 28 }) {
           <stop offset="100%" stopColor="#0A66AE" />
         </linearGradient>
       </defs>
-      <polygon points="0,0 58,0 100,50 0,50" fill="url(#sapGrad)" />
-      <polygon points="58,0 100,0 100,50" fill="#63BFEA" />
+      <rect x="0" y="0" width="100" height="50" fill="url(#sapGrad)" />
       <text x="6" y="37" textLength="52" lengthAdjust="spacingAndGlyphs"
         fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="32" fill="#FFFFFF">SAP</text>
     </svg>
