@@ -346,16 +346,17 @@ function Gauge({ value, size = 180, stroke = 16, segments = null, caption, durat
    ============================================================ */
 function SapLogo({ height = 28 }) {
   return (
-    <svg height={height} viewBox="0 0 100 50" style={{ display: "block" }} role="img" aria-label="SAP">
+    <svg height={height} viewBox="0 0 100 60" style={{ display: "block" }} role="img" aria-label="SAP">
       <defs>
-        <linearGradient id="sapGrad" x1="0" y1="0" x2="0.15" y2="1">
-          <stop offset="0%" stopColor="#1AA7E8" />
-          <stop offset="100%" stopColor="#0A66AE" />
+        <linearGradient id="sapGrad" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stopColor="#0A6CB4" />
+          <stop offset="55%" stopColor="#0E97D8" />
+          <stop offset="100%" stopColor="#1CB8EE" />
         </linearGradient>
       </defs>
-      <rect x="0" y="0" width="100" height="50" fill="url(#sapGrad)" />
-      <text x="6" y="37" textLength="52" lengthAdjust="spacingAndGlyphs"
-        fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="32" fill="#FFFFFF">SAP</text>
+      <polygon points="0,0 100,0 74,60 0,60" fill="url(#sapGrad)" />
+      <text x="7" y="46" textLength="62" lengthAdjust="spacingAndGlyphs"
+        fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="40" fill="#FFFFFF">SAP</text>
     </svg>
   );
 }
